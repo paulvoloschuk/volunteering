@@ -6,7 +6,7 @@ body{
   font-family: 'Ubuntu', sans-serif;
   background:snow;
   color:#858182;
-  
+  overflow-x: hidden;
 }
 a, span.hash{
   text-decoration: none;
@@ -328,10 +328,10 @@ header .contact a{
   width:23%;
   margin:0.5%;
 }
-.gallery::after{
+.todo::before{
   position:absolute;
-  bottom:-20vh;
-  left:0;
+  top:0;
+  right:0;
   content: "";
   width:0;
   height:0;
@@ -407,8 +407,13 @@ footer p{
   font-size:80%;
   opacity: .7;
 }
-.copyright p span:last-of-type{
-  float:right;
+.copyright p{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.copyright p span{
+  display: block;
 }
 @media screen and (max-width:960px) {
   .addr{display: block;}
@@ -419,6 +424,9 @@ footer p{
     background: rgba(0,0,0,.9);
   }
   .toggle ul{
+    position:absolute;
+    left:0;
+    width:100%;
     margin-top:calc(50vh - 15em);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -438,7 +446,12 @@ footer p{
 }
 @media screen and (max-width:720px) {
   .contact span{display: block;}
-  .contact{text-align:right}
+  footer .contact p{text-align:right}
   .contact h3{text-align:right}
   .adress h3:first-of-type{text-align:left;}
+}
+@media screen and (max-width:600px) {
+  header h1{
+    top:6vh;
+  }
 }
