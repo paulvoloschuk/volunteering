@@ -426,6 +426,8 @@ footer p{
   .toggle ul{
     position:absolute;
     left:0;
+    box-sizing: border-box;
+    padding-top: 5vh;
     width:100%;
     margin-top:calc(50vh - 15em);
     display: -webkit-box;
@@ -442,6 +444,9 @@ footer p{
     display: block;
     text-align: center;
   }
+  .gallery img {
+    width:48%;
+  }
 
 }
 @media screen and (max-width:720px) {
@@ -453,5 +458,16 @@ footer p{
 @media screen and (max-width:600px) {
   header h1{
     top:6vh;
+  }
+  .gallery img {
+    width:98%;
+  }
+}
+@media screen and (max-height:600px) {
+  header h1{
+    font-size:250%;
+  }
+  h2{
+    font-size: 250%;
   }
 }
