@@ -84,17 +84,34 @@ article{position: relative;}
 .mask2::after{
   background: url(../img/bg3.jpg) no-repeat;
 }
+.logo{
+  width:10em;
+  height:3em;
+}
 nav{
   position:fixed;
   width: 100%;
   top:0;
   left:0;
   z-index: 3;
-  background: -moz-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
-  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
-  background: linear-gradient(to bottom,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c000000', endColorstr='#00000000',GradientType=0 );
+  height:3em;
+  background: rgba(0,0,0,.2);
+  transition: background-color 1s ease-in-out;
+  transition: height 0.3s ease-in-out;
+  overflow: hidden;
+}
+.menu{
+  display:none;
+  width:2em;
+  height:2em;
+  margin: 0.5em 1em;
+  background: url(../img/menu.svg) 50% 50% no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
 
+.scroll{
+  background: rgba(0,0,0,1);
 }
 nav .wrapper{
   display: flex;
@@ -111,10 +128,13 @@ nav a{
   line-height: 3em;
   height:3em;
   display: inline-block;
-  color:white;
+  color:snow;
+  text-transform: uppercase;
 }
 nav a:hover{
   text-shadow: 0 0 4em rgba(255,255,255,1), 0 0 2em rgba(255,255,255,1), 0 0 0.5em rgba(255,255,255,1), 0 0 1em rgba(255,255,255,1), 0 0 0.1em rgba(255,255,255,1);
+  color:white;
+  text-decoration: none;
 }
 header, article, footer{
   z-index: 2;
@@ -126,10 +146,10 @@ header{
 header h1{
   position: absolute;
   text-transform: uppercase;
-  font-size: 220%;
-  width:50vw;
+  font-size: 300%;
+  width:60vw;
   top:27vh;
-  left: 17vw;
+  left: 10vw;
   font-weight: normal
 }
 header h1 span{
@@ -162,7 +182,7 @@ header .contact a{
   color:lightgray;
   margin-right: 5em;
 }
-.story{padding: 8vh 0 0 0;}
+.story{padding: 10vh 0 0 0;}
 .story h2,
 .todo h2{
   padding-left:1em;
@@ -197,8 +217,9 @@ header .contact a{
 .statistics{
   background:url(../img/bg2.jpg) 0% 50% no-repeat;
   background-size: cover;
-  padding:2em 0 20vh 0;
+  padding:10vh 0 20vh 0;
   color: gray;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,.6);
 }
 .statistics::before{
   position:absolute;
@@ -211,6 +232,7 @@ header .contact a{
   border-right: 50vw solid transparent;
   border-left: 50vw solid snow;
   border-top: 10vh solid snow;
+  filter: drop-shadow(0 5px 3px rgba(0,0,0,.5));
 }
 .statistics::after{
   position:absolute;
@@ -241,9 +263,13 @@ header .contact a{
 .statistics .container{
   display: flex;
   justify-content: space-around;
+  flex-flow: row wrap;
 }
 .stat-block{
+  box-sizing: border-box;
+  padding: 0 5px;
   width: 20%;
+  min-width: 10em;
   color:white;
   text-align: center;
 }
@@ -260,6 +286,7 @@ header .contact a{
   text-align: center;
   margin: 0 0 1em 0;
   color: gray;
+  text-shadow: 0.1em 0.1em 0.1em rgba(0,0,0,.1);
 }
 .gallery .container{
   text-align: center;
@@ -281,7 +308,7 @@ header .contact a{
   border-right: 50vw solid #151417;
   border-top: 10vh solid #151417;
 }
-.todo{ padding: 2em 0 10em 0;}
+.todo{ padding: 10vh 0 10em 0;}
 footer{
   background:url(../img/bg4.jpg) 50% 50% no-repeat;
   background-size: cover;
@@ -306,18 +333,24 @@ footer::before{
   border-left: 50vw solid transparent;
   border-right: 50vw solid transparent;
   border-top: 30vh solid snow;
+  filter: drop-shadow(0 5px 3px rgba(0,0,0,.2));
 }
 #map{
   margin: 0 auto;
   width:100%;
   height:20em;
   background: gray;
+  border:0.3em solid snow;
 }
 .contacts{
   display: flex;
   flex-flow: row nowrap;
   flex-basis: 50%;
   justify-content: space-around;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0,0,0,.6);
+}
+.contacts > div{
+  width:50%;
 }
 footer p{
   margin: 0.5em 0 !important;
@@ -327,4 +360,40 @@ footer p{
   min-width:7em;
   padding: 0 0.5em;
   display: inline-block;
+}
+.copyright{
+  background:rgba(0,0,0,.3);
+  padding: 0.5em;
+  font-size:80%;
+  opacity: .7;
+}
+.copyright p span:last-of-type{
+  float:right;
+}
+@media screen and (max-width:960px) {
+  .addr{display: block;}
+  .menu{display: inline-block;}
+  nav ul{visibility: hidden;}
+  .toggle{
+    height:100vh;
+    background: rgba(0,0,0,.9);
+  }
+  .toggle ul{
+    margin-top:calc(50vh - 15em);
+    visibility: visible;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
+  .toggle ul li{
+    display: block;
+    text-align: center;
+  }
+
+}
+@media screen and (max-width:720px) {
+  .contact span{display: block;}
+  .contact{text-align:right}
+  .contact h3{text-align:right}
+  .adress h3:first-of-type{text-align:left;}
 }

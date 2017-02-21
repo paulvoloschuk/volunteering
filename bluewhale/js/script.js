@@ -1,4 +1,5 @@
-var vw,vh;
+var vw,vh,nav,ul;
+console.log(nav);
 var Parallax = {
   containers: [],
   add: function(elementQuery){
@@ -22,23 +23,34 @@ var Parallax = {
     }
   }
 };
+function fadeNavigation(){
+  if (window.pageYOffset > 5*window.vh) window.nav.classList.add('scroll');
+  else window.nav.classList.remove('scroll');
+}
+function CalculateScreen() {
+  window.vw = document.body.clientWidth / 100;
+  window.vh = document.body.clientHeight / 100;
+}
 
 window.onload = function(){
-  vw = document.body.clientWidth / 100;
-  vh = document.body.clientHeight / 100;
-
+  window.nav = document.getElementById('navigation');
+  document.getElementById('toggle_nav').onclick = function(){
+    window.nav.classList.toggle('toggle');
+  }
+  document.getElementById('menu').onclick = function(){
+    window.nav.classList.remove('toggle');
+  }
+  CalculateScreen();
+  fadeNavigation();
   Parallax.add('#parallax');
   Parallax.add('#parallax .mask1');
   Parallax.add('#parallax .mask2');
-
+  Parallax.move();
   window.onresize = function(){
-    vw = document.body.clientWidth / 100;
-    vh = document.body.clientHeight / 100;
+    CalculateScreen();
   }
-
   window.onscroll = function(){
     Parallax.move();
+    fadeNavigation();
   }
-
-  Parallax.move();
 }

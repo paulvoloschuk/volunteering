@@ -8,27 +8,30 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
   </head>
   <body>
     <div id="parallax" class="parallax" data-direction="vertical" data-speed="-0.3">
       <div class="mask1 parallax" style="background-position: -178vh -14vw;" data-posx="-178vh" data-posy="-14vw" data-direction="vertical" data-speed="0.5"></div>
       <div class="mask2 parallax" style="background-position: -102vh 12vw;" data-posx="-102vh" data-posy="-12vw" data-direction="horizontal" data-speed="0.4"></div>
     </div>
-    <nav>
+    <nav id="navigation" class="">
       <div class="wrapper">
-        <img class="logo" src="/" />
-        <ul>
-          <li><a href="#">Наверх</a></li>
-          <li><a href="#">История</a></li>
-          <li><a href="#">Статистика</a></li>
-          <li><a href="#">Галерея</a></li>
-          <li><a href="#">Что делать?</a></li>
-          <li><a href="#">Контакты</a></li>
+        <a href="#top">
+          <img class="logo" src="img/logo.svg" />
+        </a>
+        <ul id="menu">
+          <li><a href="#story">История</a></li>
+          <li><a href="#statistics">Статистика</a></li>
+          <li><a href="#gallery">Результаты игры</a></li>
+          <li><a href="#todo">Что делать?</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
+        <a class="menu" id="toggle_nav"></a>
       </div>
     </nav>
 
-    <header>
+    <header id="top">
       <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit...<br /><span>Lorem ipsum dolor sit amet</span></h1>
       <div class="mouse"></div>
       <p class="contact">
@@ -37,13 +40,13 @@
       </p>
     </header>
     <section>
-      <article class="story">
+      <article class="story" id="story">
         <div class="wrapper">
           <h2>Суть истории</h2>
           <div class="container">
             <p>Наверняка вы смотрели фильм «Нерв», вышедший в прокат в прошлом году. По сюжету картины ребята, среди которых и главная героиня Ви, ввязались на первый взгляд в безобидную, но, как позже оказалось, очень опасную игру. Нужно было лишь зарегистрироваться в приложении NERVE, выполнять задания, которые дают тебе твои подписчики, и собирать все большее и большее количество просмотров.</p>
             <p>Принцип такой: ты становишься популярной, а на твой счет перечисляются большие суммы. На протяжении всей игры задания становились все жестче и жестче и, начав с безобидного «познакомиться в незнакомым парнем в кафе», можно было закончить <b>«убей своего лучшего друга»</b>. В случае неповиновения безымянные создатели NERVE могли отобрать у тебя все: деньги, личность, угрожали убить твоих родных и близких. Конечно, для главной героини Ви и ее парня все закончилось хорошо. Ну а как по-другому может быть в попсовом голливудском кино?..</p>
-            <img src="img/story1.webp" alt="" />
+            <img src="img/story1.webp" alt="Синий кит" />
             <h3>С чего все началось?</h3>
             <p>Первые сообщения о подобных играх появились в 2015 году. Все началось с пабликов суицидальной направленности «ВКонтакте». Это были открытые группы, и вступить в них мог каждый желающий – любой подросток, разочарованный в жизни и <b>втайне мечтающий умереть</b>. Конечно, администрация «ВКонтакте» предприняла все меры, чтобы заблокировать опасные группы и паблики, а также хештеги, но игра никуда не делась – пользователи сети начали сопровождать свои посты в Инстаграме и Твиттере хештегами #тихийдом #разбудименяв420 #f57 #f58. </p>
             <h4>Факты</h4>
@@ -53,7 +56,7 @@
               <li>По последним данным в России и Украине зафиксировано множество <b>реальных случаев</b> подростковых самоубийств, произошедших в ходе игры «Синий кит».</li>
             </ul>
             <h3>В чем суть игры?</h3>
-            <img src="img/story2.webp" alt="" />
+            <img src="img/story2.webp" alt="Скриншот группы" />
             <p>Чтобы попасть в игру необходимо сделать так, чтобы «инструктор» или «администратор» нашел тебя. Для этого участники игры должны запостить определенный набор хештегов и ждать инструкций. Первое задание – рисунок кита на собственной руке, некоторые особо отчаянные подростки вырезают его лезвием. Далее «администрация» высылает различные оффлайн-задания о поиске определенных записок или предметов в городе. Финальный этап игры – суицид участника.</p>
             <center>
               <blockquote class="twitter-tweet" data-lang="ru">
@@ -73,7 +76,7 @@
           </div>
         </div>
       </article>
-      <article class="statistics">
+      <article class="statistics" id="statistics">
         <div class="wrapper">
           <h2>Статистика</h2>
           <div class="container">
@@ -96,10 +99,10 @@
           </div>
         </div>
       </article>
-      <article class="gallery">
+      <article class="gallery" id="gallery">
         <div class="wrapper">
           <h2>Материалы</h2>
-          <div class="container" id="gallery">
+          <div class="container">
             <img src="img/gallery/image1.jpg" alt="Выпрыгнул из окна" title="Выпрыгнул из окна"/>
             <img src="img/gallery/image2.jpg" alt="Прыгнула под поезд" title="Прыгнула под поезд" />
             <img src="img/gallery/image3.jpg" alt="Первые шаги" title="Первые шаги" />
@@ -115,7 +118,7 @@
           </div>
         </div>
       </article>
-      <article class="todo">
+      <article class="todo" id="todo">
         <div class="wrapper">
           <h2>Как быть?</h2>
           <div class="container">
@@ -165,25 +168,52 @@
     </section>
     <footer>
       <div class="wrapper">
-        <div class="container">
-          <div id="map"> тут будет карта
+        <div class="container" id="contacts">
+          <div id="map">
           </div>
+          <script>
+            var map;
+            function initMap() {
+              var myLatLng = {lat: 50.444524, lng: 30.573666};
+
+              var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: myLatLng
+              });
+
+              var marker = new google.maps.Marker({
+                position: {lat: 50.444524, lng: 30.606666},
+                map: map,
+                title: 'Hello World!'
+              });
+            }
+          </script>
           <div class="contacts">
             <div class="adress">
               <h3>Адресс</h3>
               <p>г.Киев, ул.Евгения Сверстюка 4а(4 этаж)</p>
               <p>пн - сб: 10 - 19</p>
             </div>
-            <div>
+            <div class="contact">
               <h3>Контакты</h3>
               <p><span>Контактный т:</span><a href="#">+38(095)345 43 95</a></p>
               <p><span>Skype:</span><a href="#">skypeacc</a></p>
               <p><span>Email:</span><a href="#">your@mail.com</a></p>
-
             </div>
           </div>
         </div>
       </div>
+      <div class="copyright">
+        <div class="wrapper">
+          <p>
+            <span>Copyright (c) 2017 Copyright Holder All Rights Reserved.</span>
+            <span>Designed by <a href="http://paul-voloschuk.com/">Paul Voloschuk</a></span>
+          </p>
+        </div>
+      </div>
     </footer>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVthErWAljfpAiKFTQqi9n-G10uCtADYY&callback=initMap">
+    </script>
   </body>
 </html>
