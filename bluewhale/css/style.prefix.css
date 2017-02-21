@@ -99,10 +99,8 @@ nav{
   z-index: 3;
   height:3em;
   background: rgba(0,0,0,.2);
-  -webkit-transition:background-color 1s ease-in-out;
-  transition: background-color 1s ease-in-out;
-  -webkit-transition:height 0.3s ease-in-out;
-  transition: height 0.3s ease-in-out;
+  -webkit-transition: background-color 1s ease-in-out, height 0.3s ease-in-out;
+  transition: background-color 1s ease-in-out, height 0.3s ease-in-out;
   overflow: hidden;
 }
 .menu{
@@ -454,6 +452,7 @@ footer p{
   footer .contact p{text-align:right}
   .contact h3{text-align:right}
   .adress h3:first-of-type{text-align:left;}
+  .story h2::before{left:0.3em;}
 }
 @media screen and (max-width:600px) {
   header h1{
