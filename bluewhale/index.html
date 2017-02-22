@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <title>1</title>
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Paul_Voloschuk">
+    <meta name="yandex-tableau-widget" content="logo=img/yandex-widget.png, color=#39467a" />
+    <meta name="yandex-verification" content="" />
+    <meta property="og:url" content="http://...">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="landingpage" />
+    <meta property="og:image" content="img/follow.jpg">
+
+    <link rel="apple-touch-icon" href="img/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-ipad-retina.png">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="icon" type="image/png" href="img/favicon.png">
+
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/style.prefix.css" />
+
     <script src="js/script.js"></script>
     <script src="js/scroll.js"></script>
   </head>
@@ -16,7 +41,7 @@
       <div class="mask1 parallax" style="background-position: -178vh -14vw;" data-posx="-178vh" data-posy="-14vw" data-direction="vertical" data-speed="0.5"></div>
       <div class="mask2 parallax" style="background-position: -102vh 12vw;" data-posx="-102vh" data-posy="-12vw" data-direction="horizontal" data-speed="0.4"></div>
     </div>
-    <nav id="navigation" class="">
+    <nav id="navigation">
       <div class="wrapper">
         <a href="#top">
           <img class="logo" src="img/logo.svg" />
@@ -191,15 +216,33 @@
           </script>
           <div class="contacts">
             <div class="adress">
-              <h3>Адресс</h3>
-              <p>г.Киев, ул.Евгения Сверстюка 4а(4 этаж)</p>
-              <p>пн - сб: 10 - 19</p>
+              <h3>Пишите нам</h3>
+              <form id="ajax_mail">
+                <label>
+                  <input type="text" name="name" placeholder="Вас зовут...?">
+                </label>
+                <label>
+                  <input type="text" name="contacts" placeholder="Как связаться?">
+                </label>
+                <label>
+                  <textarea name="text" placeholder="Текст сообщения"></textarea>
+                </label>
+                <label>
+                  <input type="submit" value="Отправить">
+                </label>
+              </form>
             </div>
             <div class="contact">
               <h3>Контакты</h3>
-              <p><span>Контактный т:</span><a href="#">+38(095)345 43 95</a></p>
-              <p><span>Skype:</span><a href="#">skypeacc</a></p>
-              <p><span>Email:</span><a href="#">your@mail.com</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <ul>
+                <li class="flaticon-placeholder-filled-point">г.Киев, ул.Сверстюка 4а(4 этаж)</li>
+                <li class="flaticon-clock">пн - сб: 10<sup>00</sup> - 19<sup>00</sup></li>
+                <li class="flaticon-email"><a target="_blank" href="mailto:paul.voloschuk@gmail.com">paul.voloschuk@gmail.com</a></li>
+                <li class="flaticon-phone-call"><a href="tel:+380953454395">95 3 454 3 95</a></li>
+                <li class="flaticon-skype-logo"><a href="skype:">paulvoloschuk</a></li>
+                <!-- <li class="flaticon-vk"><a target="_blank" href="http://vk.com/paulvoloschuk">/paulvoloschuk</a></li> -->
+              </ul>
             </div>
           </div>
         </div>

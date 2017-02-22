@@ -7,6 +7,8 @@ body{
   background:snow;
   color:#858182;
   overflow-x: hidden;
+  user-select:none;
+  cursor:default;
 }
 a, span.hash{
   text-decoration: none;
@@ -372,6 +374,7 @@ footer::before{
   height:20em;
   background: gray;
   border:0.3em solid snow;
+  box-sizing: border-box;
 }
 .contacts{
   display: -webkit-box;
@@ -389,15 +392,52 @@ footer::before{
 }
 .contacts > div{
   width:50%;
+  padding: 0 2em;
+  box-sizing: border-box;
 }
 footer p{
   margin: 0.5em 0 !important;
 }
-.contacts span{
-  text-align: right;
-  min-width:7em;
-  padding: 0 0.5em;
+.contacts ul{
+  list-style: none;
+}
+
+.contacts li{
+  padding: 0.4em;
+}
+.contacts li span{
+  display: block;
+  width:100%;
+  text-align: center;
+}
+.contacts li::before{
+  width:1.3em;
+  height: 1.3em;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: -0.4em;
+  margin-right: 0.7em;
   display: inline-block;
+  font-size: 130%;
+}
+.contacts a{
+  text-decoration: none;
+  color:inherit;
+}
+.contacts li:hover a{
+  text-decoration: underline;
+}
+.contacts .flaticon-email:hover{
+  color:rgb(224, 215, 129);
+}
+.contacts .flaticon-phone-call:hover{
+  color:rgb(74, 223, 147);
+}
+.contacts .flaticon-skype-logo:hover{
+  color:rgb(48, 171, 232);
+}
+.contacts .flaticon-vk:hover{
+  color:rgb(93, 135, 217);
 }
 .copyright{
   background:rgba(0,0,0,.3);
@@ -413,6 +453,40 @@ footer p{
 .copyright p span{
   display: block;
 }
+form label{
+  display: block;
+  margin: 1em;
+}
+input[type="text"], textarea{
+  background: transparent;
+  border:none;
+  margin:0;
+  border-bottom: 0.1em solid snow;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  color:lightgray;
+}
+textarea{
+  height:5em;
+  resize:vertical;
+}
+input[type="text"]:focus, textarea:focus{
+  background: rgba(255,255,255,.1);
+}
+input[type="submit"]{
+  background: transparent;
+  border: 0.1em solid snow;
+  color:snow;
+  font-family: Ubuntu;
+  text-transform: uppercase;
+  padding: 0.3em 1em;
+  float:right;
+}
+*::-webkit-input-placeholder {color:darkgray;text-transform: uppercase;}
+*::-moz-placeholder          {color:darkgray;text-transform: uppercase;}
+*:-moz-placeholder           {color:darkgray;text-transform: uppercase;}
+*:-ms-input-placeholder      {color:darkgray;text-transform: uppercase;}
 @media screen and (max-width:960px) {
   .addr{display: block;}
   .menu{display: inline-block;}
@@ -445,13 +519,16 @@ footer p{
   .gallery img {
     width:48%;
   }
-
+  .contacts{
+    padding-top: 7em;
+    display: block;
+  }
+  .contacts > div{
+    width: 100%;
+  }
 }
 @media screen and (max-width:720px) {
-  .contact span{display: block;}
-  footer .contact p{text-align:right}
-  .contact h3{text-align:right}
-  .adress h3:first-of-type{text-align:left;}
+  footer h3{text-align:left;}
   .story h2::before{left:0.3em;}
 }
 @media screen and (max-width:600px) {
@@ -462,7 +539,7 @@ footer p{
     width:98%;
   }
 }
-@media screen and (max-height:600px) {
+@media screen and (max-height:400px) {
   header h1{
     font-size:250%;
   }
